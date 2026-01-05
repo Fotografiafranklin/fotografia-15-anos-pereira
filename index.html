@@ -19,113 +19,88 @@
   <meta property="og:url" content="https://TU_DOMINIO_AQUI">
 
   <style>
-    .galeria {
+   <!-- ================= GALERÍA DE FOTOS ================= -->
+<section id="galeria" style="background:#0f0f0f;">
+  <div style="max-width:1200px;margin:auto;padding:60px 20px;">
+
+    <h2 style="text-align:center;font-size:2.2rem;margin-bottom:10px;">
+      Galería Fotográfica de 15 Años en Pereira
+    </h2>
+
+    <p style="text-align:center;max-width:800px;margin:0 auto 40px;color:#ccc;">
+      Conoce nuestro portafolio de fotografía profesional para quinceañeras,
+      sesiones pre 15 y eventos especiales en Pereira.
+    </p>
+
+    <!-- GRID -->
+    <div class="galeria-grid">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMdhNZJ36ftoXEOqtWTYFfbiB-YZzfvj0Fgn6MZAmeorMadhZ-2QpR_EsO7an6riridK7QqKLUdjON_ADvUq5l8vPoVcNLBoNilwfgNSabGIHaQzF6-yQnRxjb5dq4D5Lspb8yzT5gePpuC7LFtbU8ZIQ=w619-h929-s-no-gm" alt="Sesion fotografica de 15 años en Pereira">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczPBk2xGbLquKsf2BnCNIqMT-xRwOPaCVwlrl_7jSXbQDXm3SbAMwuN3C80mj70WbBeeJKjOIWj7iXoGaoVO2SxeWmNx50TteVha-kYVpw8_pT-4a28m-EPKJzTXWjvK-NXhsiyxSEwdO0on5FwdkXFu0w=w619-h929-s-no-gm" alt="Fotografia artistica quinceañera Pereira">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOB8dB9rg_mQmSjoztl6bJkWmNF67bfTNCs0YZRAQ2lL8PstNyD6waqD1jX2zmcjJUS6Wb5Zctfy1qog6Vi7CrO24gF-Fj-wuQDCIgyovlP6GVs9tRS0k59dYXsYZJsz825hgNwK4N91FVoTOfvknI5wQ=w619-h929-s-no-gm" alt="Fotos pre 15 años al aire libre">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOLJizGdIiISyHzxKcHSrySHLhgvT0TMoLFOvHW-Y2co6xtnGrqNpPuI0MPIevK-hNTR3DP90vKcwabRnBZtVOAHaV6dth9zn2kOJxJ4UaFkRGhmDaDWyD8pK86NOaxxsuhhXIMukqHxSru5MsWoIr68A=w1394-h929-s-no-gm" alt="Sesion de fotos para quinceañera Pereira">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOZtbwej5_8KUHhxA1uVmviNk5-tlSy6bmnr0jsijvn-4IyD5UFunuQdMY7JdOf3kJiC_yG7dU5Mw5ykP3XfpTfFQ5KOZ7fCrjJZU9uvrJPrQgngjn_oBJPawMiKYtfP65CH7p0OxhWMYqmPGEraqQaog=w619-h929-s-no-gm" alt="Fotografo de 15 años en Pereira">
+
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOltjJ_KIJDKJkl0HR2PWFcQaERN7K2xDTS-bo7zOG7GT_-Ywrh6AzaFufZpLmP-Xz5rE4EKoGvugajWoyNglFZUUfcsDdbrTcGpxuOT5IIsfewM5n8FutVchXRV1aPT8rISvQB6UxdDE-ZpmhTi0-iYg=w619-h929-s-no-gm" alt="Sesion profesional quince años Pereira">
+
+    </div>
+
+    <!-- BOTÓN -->
+    <div style="text-align:center;margin-top:40px;">
+      <a href="https://photos.app.goo.gl/wc3fGUExdJVWeiow7"
+         target="_blank"
+         rel="noopener"
+         class="btn-ver-mas">
+        Ver más fotos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ESTILOS GALERÍA ================= -->
+<style>
+.galeria-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
-.galeria img {
+.galeria-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-  transition: transform .3s;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.galeria img:hover {
-  transform: scale(1.04);
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
 }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.6;
-    }
+.btn-ver-mas {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #25D366;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background .3s, transform .3s;
+}
 
-    header {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-      url("https://lh3.googleusercontent.com/pw/AP1GczPh8gI-jXB6QVbVOvPNHKJpsjNZcKr_Od0Bu-17GICXeFqO7Gd-cwn7Xai2glJ__tepmO3BMN9I7vfNLweNBkV_faogE-orw8kG3zECWCiaheJ83xxqZfm0Rxi9GsWptOAGfbMvnj0-8DVmN3xHN7jE6g=w619-h929-s-no-gm") center/cover no-repeat;
-      color: #fff;
-      padding: 100px 20px;
-      text-align: center;
-    }
+.btn-ver-mas:hover {
+  background: #1ebe5b;
+  transform: translateY(-2px);
+}
+</style>
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      background: #25D366;
-      color: #fff;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    .paquetes {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .paquete {
-      background: #fff;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.1);
-      transition: transform .3s;
-    }
-
-    .paquete:hover {
-      transform: translateY(-5px);
-    }
-
-    .paquete.destacado {
-      border: 3px solid #c59d5f;
-    }
-
-    .precio {
-      font-size: 1.8rem;
-      color: #c59d5f;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
 <body>

@@ -569,7 +569,98 @@ ul li{
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 </style>
+<style>
+  /* ===== TESTIMONIOS ===== */
+.testimonios{
+  padding:90px 20px;
+  background:#0f0f0f;
+  color:#fff;
+  text-align:center;
+}
 
+.testimonios h2{
+  font-size:2.5rem;
+  margin-bottom:10px;
+}
+
+.subtitulo-testimonios{
+  max-width:700px;
+  margin:0 auto 50px;
+  color:#ccc;
+  font-size:1.05rem;
+}
+
+.grid-testimonios{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.card-testimonio{
+  background:#1a1a1a;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 25px 60px rgba(0,0,0,.6);
+  transition:transform .5s ease, box-shadow .5s ease;
+}
+
+.card-testimonio:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 40px 90px rgba(0,0,0,.85);
+}
+
+.card-testimonio img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+}
+
+.contenido-testimonio{
+  padding:28px 22px;
+}
+
+.contenido-testimonio p{
+  font-size:.95rem;
+  line-height:1.6;
+  margin:15px 0;
+  color:#eee;
+}
+
+.estrellas{
+  font-size:1.2rem;
+  color:gold;
+}
+
+.autor{
+  font-size:.85rem;
+  color:#25D366;
+  font-weight:600;
+}
+
+/* CTA TESTIMONIOS */
+.cta-testimonios{
+  margin-top:50px;
+}
+
+.btn-testimonios{
+  display:inline-block;
+  padding:16px 36px;
+  background:#25D366;
+  color:#000;
+  font-weight:800;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:1.1rem;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-testimonios:hover{
+  transform:scale(1.07);
+  box-shadow:0 15px 40px rgba(37,211,102,.5);
+}
+</style>
 
 <!-- ================= JS ANIMACIÓN ================= -->
 <script>
@@ -601,58 +692,7 @@ document.querySelectorAll(".animate").forEach(el=>{
     </a>
   </div>
 </section>
-<!-- ===== TESTIMONIOS ===== -->
-<section class="testimonios">
-  <h2>Lo que dicen nuestras familias</h2>
-  <p class="subtitulo-testimonios">
-    Experiencias reales de familias que confiaron en nosotros para un momento único
-  </p>
 
-  <div class="grid-testimonios">
-
-    <div class="card-testimonio">
-      <img src="https://photos.fife.usercontent.google.com/pw/AP1GczP-SbUgImSU0WCsQ28FQ0ysAA8bqbwYvePeMyUls-R1sbxoOI5d_Brp0w=w559-h929-s-no-gm?authuser=0" alt="Testimonio cliente 15 años Pereira">
-      <div class="contenido-testimonio">
-        <div class="estrellas">⭐⭐⭐⭐⭐</div>
-        <p>
-          “El trabajo fue impecable, el photobook quedó hermoso y el video nos hizo llorar.
-          Fue la mejor decisión contratar el paquete Premium.”
-        </p>
-        <span class="autor">— Familia Gómez · Pereira</span>
-      </div>
-    </div>
-
-    <div class="card-testimonio">
-      <img src="https://photos.fife.usercontent.google.com/pw/AP1GczMtFwDKmh8al_AZAf71o1dqNjKxajdvf4NGqiOt-hDtzpwZ7zGSbFL73A=w552-h929-s-no-gm?authuser=0" alt="Testimonio sesión pre 15 años">
-      <div class="contenido-testimonio">
-        <div class="estrellas">⭐⭐⭐⭐⭐</div>
-        <p>
-          “Desde la sesión pre-15 hasta el evento, todo fue perfecto.
-          La calidad superó lo que esperábamos.”
-        </p>
-        <span class="autor">— Sandra M. · Dosquebradas</span>
-      </div>
-    </div>
-
-    <div class="card-testimonio">
-      <img src="https://photos.fife.usercontent.google.com/pw/AP1GczPMRHmCqN8CO44AyRQ7uWNtWMX3ZspRPdvnRi_1AZ3u6z8vtvWELbgmfA=w558-h929-s-no-gm?authuser=0" alt="Testimonio evento 15 años">
-      <div class="contenido-testimonio">
-        <div class="estrellas">⭐⭐⭐⭐⭐</div>
-        <p>
-          “Muy profesional, puntual y dedicado.
-          Capturó cada momento especial de los 15 años de mi hija.”
-        </p>
-        <span class="autor">— Carlos R. · Pereira</span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="cta-testimonios">
-    <a href="https://photos.app.goo.gl/FtG6entwm2XTiy8J6" target="_blank" class="btn-testimonios">
-      Ver más testimonios
-    </a>
-  </div>
 </section>
 
 <!-- CTA -->

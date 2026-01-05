@@ -289,158 +289,92 @@ document.querySelectorAll(".animate").forEach(el=>{
       </a>
     </div>
 
-    <!-- ===== PAQUETE PREMIUM ===== -->
-    <div class="paquete premium">
+    <!-- ================= PAQUETE PREMIUM ================= -->
+<div class="paquete premium premium-animado">
 
+  <!-- ETIQUETAS -->
+  <div class="badge-top">TOP QUALITY</div>
+  <div class="badge-elegido">⭐ El más elegido</div>
 
-      <div class="badge-top">TOP QUALITY</div>
-      <div class="badge-elegido">⭐ El más elegido</div>
+  <!-- TÍTULO -->
+  <h3>Paquete Premium de Fotografía 15 Años</h3>
 
-      <h3>Paquete Premium</h3>
+  <!-- ESTRELLAS -->
+  <div class="estrellas">⭐⭐⭐⭐⭐</div>
 
-      <div class="estrellas">⭐⭐⭐⭐⭐</div>
+  <!-- PRECIO -->
+  <p class="precio-premium">$1.600.000</p>
+  <p class="precio-antes">$2.500.000</p>
+  <span class="ahorro">Ahorra $900.000</span>
 
-      <p class="precio-premium">$1.600.000</p>
-      <p class="precio-antes">$2.500.000</p>
-      <span class="ahorro">Ahorra $900.000</span>
+  <!-- LISTA -->
+  <ul class="lista-premium">
+    <li>✔ Sesión de pre-15 incluida</li>
+    <li>✔ Preparación de la quinceañera</li>
+    <li>✔ Ceremonia completa</li>
+    <li>✔ Recepción / Fiesta</li>
+    <li>✔ Photobook premium tamaño 20×30/(70–80 fotos)</li>
+    <li>✔ +100 fotos digitales en alta calidad</li>
+    <li>✔ Video tipo tráiler (6–8 minutos)</li>
+    <li>✔ Entrega en USB + copia digital</li>
+    <li>✔ Bonos GRATIS incluidos</li>
+  </ul>
 
-      <ul>
-        <li>✔ Sesión de pre-15 incluida</li>
-        <li>✔ Preparación de la quinceañera</li>
-        <li>✔ Ceremonia completa</li>
-        <li>✔ Recepción / Fiesta</li>
-        <li>✔ Photobook (70–80 fotos)premium 20x30</li>
-        <li>✔ +100 fotos digitales HD</li>
-        <li>✔ Video tráiler 6–8 minutos</li>
-        <li>✔ USB + copia digital</li>
-        <li>✔ Bonos GRATIS</li>
-      </ul>
+  <!-- CTA -->
+  <a href="https://wa.me/573137900448" class="btn-whatsapp">
+    📲 Reservar por WhatsApp
+  </a>
 
-      <a href="https://wa.me/573137900448" class="btn-whatsapp">
-        📲 Reservar por WhatsApp
-      </a>
+  <p class="nota-premium">
+    Cupos limitados · El paquete más elegido en Pereira
+  </p>
 
-      <p class="nota">Cupos limitados · Reserva anticipada</p>
-    </div>
+</div>
 
-  </div>
-</section>
-
-<!-- ================= ESTILOS ================= -->
+<!-- ================= ESTILOS PAQUETE PREMIUM ================= -->
 <style>
-.paquetes-section{
-  padding:90px 20px;
-  background:#0b0b0b;
+/* CONTENEDOR */
+.paquete{
+  background:linear-gradient(180deg,#111,#000);
+  border-radius:28px;
+  padding:45px 35px;
+  max-width:380px;
+  margin:auto;
   color:#fff;
   text-align:center;
-}
-
-.titulo-paquetes{
-  font-size:2.6rem;
-  margin-bottom:10px;
-}
-
-.subtitulo-paquetes{
-  color:#bbb;
-  margin-bottom:60px;
-}
-
-.paquetes-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.paquete{
-  background:#111;
-  border-radius:25px;
-  padding:40px 30px;
-  box-shadow:0 20px 50px rgba(0,0,0,.6);
-  transition:.4s ease;
   position:relative;
+  box-shadow:0 25px 60px rgba(0,0,0,.7);
 }
 
-.paquete:hover{
-  transform:translateY(-8px);
-}
-
-.basico, .standard{
-  opacity:.85;
-}
-
-.paquete h3{
-  font-size:1.6rem;
-}
-
-.precio{
-  font-size:2rem;
-  color:#25D366;
-  font-weight:700;
-}
-
+/* PREMIUM */
 .premium{
   border:3px solid gold;
-  background:linear-gradient(180deg,#111,#000);
 }
 
-.precio-premium{
-  font-size:2.5rem;
-  color:#25D366;
-  font-weight:800;
+/* ANIMACIÓN ENTRADA */
+.premium-animado{
+  animation:entradaPremium 1.2s ease-out forwards;
 }
 
-.precio-antes{
-  text-decoration:line-through;
-  color:#ff7b7b;
+/* HOVER */
+.premium-animado:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 45px 90px rgba(0,0,0,.85);
 }
 
-.ahorro{
-  display:inline-block;
-  margin-top:8px;
-  background:gold;
-  color:#000;
-  padding:6px 14px;
-  border-radius:20px;
-  font-weight:700;
+/* KEYFRAMES */
+@keyframes entradaPremium{
+  from{
+    opacity:0;
+    transform:translateY(35px) scale(.97);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
 }
 
-ul{
-  list-style:none;
-  padding:0;
-  margin:30px 0;
-  text-align:left;
-}
-
-ul li{
-  margin-bottom:10px;
-  font-size:.95rem;
-}
-
-.btn-secundario{
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 25px;
-  border-radius:40px;
-  border:2px solid #25D366;
-  color:#25D366;
-  text-decoration:none;
-}
-
-.btn-whatsapp{
-  display:inline-block;
-  margin-top:20px;
-  background:#25D366;
-  color:#000;
-  padding:16px 30px;
-  border-radius:50px;
-  font-size:1.1rem;
-  font-weight:800;
-  text-decoration:none;
-  animation:pulse 2.5s infinite;
-}
-
+/* BADGES */
 .badge-top{
   position:absolute;
   top:-18px;
@@ -451,6 +385,7 @@ ul li{
   padding:8px 22px;
   border-radius:20px;
   font-weight:800;
+  font-size:.9rem;
 }
 
 .badge-elegido{
@@ -465,39 +400,73 @@ ul li{
   font-weight:bold;
 }
 
+/* TEXTO */
+h3{
+  margin-top:30px;
+  font-size:1.9rem;
+}
+
 .estrellas{
   margin:10px 0;
+  font-size:1.2rem;
 }
 
-.nota{
-  margin-top:15px;
-  font-size:.8rem;
-  color:#aaa;
+.precio-premium{
+  font-size:2.6rem;
+  color:#25D366;
+  font-weight:800;
 }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
-  70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+.precio-antes{
+  text-decoration:line-through;
+  color:#ff8c8c;
+  font-size:1rem;
 }
-</style>
 
-<!-- ================= JS ANIMACIÓN ================= -->
-<script>
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{threshold:0.3});
+.ahorro{
+  display:inline-block;
+  margin-top:10px;
+  background:gold;
+  color:#000;
+  padding:6px 16px;
+  border-radius:20px;
+  font-weight:700;
+}
 
-document.querySelectorAll(".animate").forEach(el=>{
-  observer.observe(el);
-});
-</script>
+/* LISTA */
+.lista-premium{
+  list-style:none;
+  padding:0;
+  margin:35px 0;
+  text-align:left;
+}
 
-  
+.lista-premium li{
+  margin-bottom:12px;
+  font-size:.95rem;
+}
+
+/* BOTÓN */
+.btn-whatsapp{
+  display:inline-block;
+  background:#25D366;
+  color:#000;
+  padding:16px 32px;
+  border-radius:50px;
+  font-size:1.1rem;
+  font-weight:800;
+  text-decoration:none;
+  animation:pulse 2.5s infinite;
+}
+
+.btn-whatsapp:hover{
+  background:#1ebe5d;
+  transform:scale(1.05);
+}
+
+/* PULSE */
+@
+
 </section>
 
 <!-- GALERÍA -->

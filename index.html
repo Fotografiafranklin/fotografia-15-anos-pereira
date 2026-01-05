@@ -74,24 +74,115 @@ footer{
 
 <body>
 
-<!-- ===== HERO SECTION ===== -->
-<section class="hero">
-  <h1>Fotografía Profesional de 15 Años en Pereira</h1>
-  <p class="hero-sub">
-    Capturamos cada emoción de este día único.<br>
-    Paquete Premium completo con precio por debajo del mercado.
-  </p>
+/* ===== HERO SECTION ===== */
+.hero-section{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("https://lh3.googleusercontent.com/pw/AP1GczOltjJ_KIJDKJkl0HR2PWFcQaERN7K2xDTS-bo7zOG7GT_-Ywrh6AzaFufZpLmP-Xz5rE4EKoGvugajWoyNglFZUUfcsDdbrTcGpxuOT5IIsfewM5n8FutVchXRV1aPT8rISvQB6UxdDE-ZpmhTi0-iYg=w1394-h929-s-no-gm")
+    center/cover no-repeat;
+}
 
-  <ul class="hero-checks">
-    <li>✔ Especialista en eventos de 15 años</li>
-    <li>✔ Experiencia real y comprobada</li>
-    <li>✔ Entrega segura y garantizada</li>
-  </ul>
+/* CONTENIDO */
+.hero-content{
+  max-width:900px;
+  animation:fadeHero 1.2s ease-out forwards;
+}
 
-  <a href="https://wa.me/573137900448" class="btn-whatsapp hero-btn">
-    📲 Consultar disponibilidad
-  </a>
-</section>
+/* TITULO PRINCIPAL */
+.hero-content h1{
+  font-size:3rem;
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+/* SUBTITULO */
+.hero-subtitle{
+  font-size:1.3rem;
+  color:#f1f1f1;
+  margin-bottom:30px;
+}
+
+.hero-subtitle strong{
+  color:#25D366;
+  font-weight:800;
+}
+
+/* CONFIANZA */
+.hero-confianza{
+  list-style:none;
+  padding:0;
+  margin:0 0 40px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.hero-confianza li{
+  background:rgba(255,255,255,.12);
+  padding:12px 20px;
+  border-radius:30px;
+  font-size:.95rem;
+  color:#fff;
+  backdrop-filter:blur(6px);
+}
+
+/* BOTÓN WHATSAPP */
+.hero-btn{
+  display:inline-block;
+  background:#25D366;
+  color:#000;
+  padding:18px 38px;
+  border-radius:60px;
+  font-size:1.15rem;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 15px 40px rgba(37,211,102,.45);
+  animation:pulseHero 2.6s infinite;
+}
+
+.hero-btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 20px 50px rgba(37,211,102,.6);
+}
+
+/* ANIMACIONES */
+@keyframes fadeHero{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes pulseHero{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.5);}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .hero-content h1{
+    font-size:2.2rem;
+  }
+  .hero-subtitle{
+    font-size:1.1rem;
+  }
+}
+
 
 <!-- ================= BANNER PRECIOS ECONÓMICOS ================= -->
 <section class="container">

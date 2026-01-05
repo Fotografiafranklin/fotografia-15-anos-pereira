@@ -85,7 +85,12 @@ footer{
 
 <!-- ================= BANNER PRECIOS ECONÓMICOS ================= -->
 <section class="container">
-  <div class="banner-precios">
+  <div class="banner-precios animate">
+
+    <!-- SELLO AHORRO -->
+    <div class="sello-ahorro">
+      💰 Ahorra<br><span>$900.000</span>
+    </div>
 
     <div class="texto">
       <h2>Precios Económicos en Fotografía de 15 Años</h2>
@@ -113,20 +118,25 @@ footer{
   </div>
 </section>
 
-<!-- ================= ESTILOS BANNER ================= -->
+<!-- ================= ESTILOS ================= -->
 <style>
 .banner-precios{
+  position:relative;
   background:
     linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
-    url('https://lh3.googleusercontent.com/pw/AP1GczOLJizGdIiISyHzxKcHSrySHLhgvT0TMoLFOvHW-Y2co6xtnGrqNpPuI0MPIevK-hNTR3DP90vKcwabRnBZtVOAHaV6dth9zn2kOJxJ4UaFkRGhmDaDWyD8pK86NOaxxsuhhXIMukqHxSru5MsWoIr68A=w1394-h929-s-no-gm')
+    url('https://lh3.googleusercontent.com/pw/AP1GczOltjJ_KIJDKJkl0HR2PWFcQaERN7K2xDTS-bo7zOG7GT_-Ywrh6AzaFufZpLmP-Xz5rE4EKoGvugajWoyNglFZUUfcsDdbrTcGpxuOT5IIsfewM5n8FutVchXRV1aPT8rISvQB6UxdDE-ZpmhTi0-iYg=w619-h929-s-no-gm?authuser=0')
     center/cover no-repeat;
   border-radius:25px;
-  padding:60px 40px;
-  box-shadow:0 20px 40px rgba(0,0,0,.5);
+  padding:70px 40px;
+  box-shadow:0 25px 50px rgba(0,0,0,.5);
+  overflow:hidden;
 }
 
+/* TEXTO */
 .banner-precios .texto{
-  max-width:750px;
+  max-width:760px;
+  position:relative;
+  z-index:2;
 }
 
 .banner-precios h2{
@@ -138,10 +148,6 @@ footer{
   font-size:1.05rem;
   margin-bottom:15px;
   color:#ddd;
-}
-
-.comparativa{
-  font-size:1.1rem;
 }
 
 .tachado{
@@ -162,13 +168,82 @@ footer{
 }
 
 .cta-texto{
-  font-size:1rem;
   color:#bbb;
+}
+
+/* SELLO AHORRO */
+.sello-ahorro{
+  position:absolute;
+  top:25px;
+  right:25px;
+  background:linear-gradient(135deg,#ffcc00,#ff9900);
+  color:#000;
+  padding:15px 18px;
+  border-radius:50%;
+  text-align:center;
+  font-weight:800;
+  font-size:1rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  transform:rotate(8deg);
+  animation:pulse 2.8s infinite;
+}
+
+.sello-ahorro span{
+  font-size:1.2rem;
+}
+
+/* ANIMACIÓN SUAVE */
+.animate{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
+
+.animate.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* PULSE SELLO */
+@keyframes pulse{
+  0%{transform:scale(1) rotate(8deg);}
+  50%{transform:scale(1.05) rotate(8deg);}
+  100%{transform:scale(1) rotate(8deg);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .banner-precios{
+    padding:50px 25px;
+  }
+
+  .banner-precios h2{
+    font-size:2rem;
+  }
+
+  .sello-ahorro{
+    top:15px;
+    right:15px;
+    font-size:.9rem;
+  }
 }
 </style>
 
-  </p>
-</section>
+<!-- ================= JS ANIMACIÓN SCROLL ================= -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.3});
+
+document.querySelectorAll(".animate").forEach(el=>{
+  observer.observe(el);
+});
+</script>
+
 
 <!-- ================= PAQUETES OPTIMIZADOS ================= -->
 <section class="container">

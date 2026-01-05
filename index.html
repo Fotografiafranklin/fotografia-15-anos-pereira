@@ -496,7 +496,30 @@ document.querySelectorAll(".animate").forEach(el=>{
   observer.observe(el);
 });
 </script>
+/* ===== ANIMACIÓN PREMIUM ===== */
+.premium-animado{
+  animation: entradaPremium 1.2s ease-out forwards;
+}
 
+/* Hover elegante */
+.premium-animado:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+}
+
+/* Entrada suave */
+@keyframes entradaPremium{
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+  
 </section>
 
 <!-- GALERÍA -->

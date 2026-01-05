@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fotografo de 15 Años en Pereira | Paquetes Economicos</title>
+
+  <meta name="description" content="Fotografo de 15 años en Pereira. Paquetes economicos de fotografia y video para quinceañeras. Calidad profesional y precios por debajo del mercado.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph WhatsApp -->
+  <meta property="og:title" content="Fotografo de 15 Años en Pereira">
+  <meta property="og:description" content="Paquetes economicos de fotografia y video para quinceañeras en Pereira. Reserva tu fecha por WhatsApp.">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AP1GczMcKsIx4pSI5mrEBj87aKR0QN8F9TDU5X--PH5qq3Q84KCzlNShVhDQAhoZmhRNex1fs6KwlFWJyRBySnC-viRM909JibNHIE1yDONuU1L2-THsUCJmKu6NHoE42YCukfwtueVDwnkyao_1h_Vm_ljNkQ=w619-h929-s-no-gm">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:url" content="https://TU_DOMINIO_AQUI">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+      url("https://lh3.googleusercontent.com/pw/AP1GczPh8gI-jXB6QVbVOvPNHKJpsjNZcKr_Od0Bu-17GICXeFqO7Gd-cwn7Xai2glJ__tepmO3BMN9I7vfNLweNBkV_faogE-orw8kG3zECWCiaheJ83xxqZfm0Rxi9GsWptOAGfbMvnj0-8DVmN3xHN7jE6g=w619-h929-s-no-gm") center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #25D366;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .paquetes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .paquete {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.1);
+      transition: transform .3s;
+    }
+
+    .paquete:hover {
+      transform: translateY(-5px);
+    }
+
+    .paquete.destacado {
+      border: 3px solid #c59d5f;
+    }
+
+    .precio {
+      font-size: 1.8rem;
+      color: #c59d5f;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Fotografo de 15 Años en Pereira</h1>
+  <p>
+    Fotografia profesional para quinceañeras en Pereira con paquetes economicos,
+    calidad premium y cobertura completa del evento.
+  </p>
+  <a class="btn" href="https://wa.me/573137900448">Reserva tu fecha por WhatsApp</a>
+</header>
+
+<section>
+  <h2>Paquetes de fotografia para 15 años</h2>
+
+  <div class="paquetes">
+
+    <div class="paquete">
+      <h3>Paquete Basico</h3>
+      <p>
+        Incluye sesion fotografica de pre-15 al aire libre en un lugar que te guste.
+        Photobook de 20 paginas tamaño 15x20 en pasta dura y material fotografico.
+      </p>
+      <p>
+        Incluye entre 30 y 50 fotos en el photobook.
+        Todas las fotos se entregan tambien en formato digital en alta calidad.
+      </p>
+      <div class="precio">$1.400.000</div>
+    </div>
+
+    <div class="paquete">
+      <h3>Paquete Standard</h3>
+      <p>
+        Photobook de 20 paginas tamaño 15x20 con fotos de pre-15 y ceremonia.
+        Se cubren todos los momentos importantes de la ceremonia.
+      </p>
+      <p>
+        Incluye sesion de fotos con familiares y decoracion.
+        Aproximadamente entre 70 y 80 fotos en el photobook y en formato digital.
+      </p>
+      <div class="precio">$1.500.000</div>
+    </div>
+
+    <div class="paquete destacado">
+      <h3>Paquete Premium</h3>
+      <p>
+        Cobertura completa del evento: preparacion, ceremonia y recepcion.
+        Incluye fotos y video tipo trailer con los mejores momentos.
+      </p>
+      <p>
+        Photobook grande tamaño 20x30 con 70 a 80 fotos seleccionadas.
+        Mas de 100 fotos entregadas en memoria USB y respaldo digital.
+      </p>
+      <div class="precio">$1.600.000</div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Fotografia de quinceañeras en Pereira con precios economicos</h2>
+  <p>
+    Ofrezco servicios de fotografia para 15 años en Pereira con precios por debajo del mercado,
+    manteniendo una excelente calidad en cada entrega.
+    Un paquete premium que normalmente cuesta entre 2.000.000 y 2.500.000,
+    aqui lo puedes obtener por tan solo 1.600.000.
+  </p>
+  <p>
+    Trabajo con responsabilidad, experiencia y pasion por capturar recuerdos unicos
+    que acompañaran a tu quinceañera toda la vida.
+  </p>
+</section>
+
+<section style="text-align:center">
+  <a class="btn" href="https://wa.me/573137900448">Consultar disponibilidad por WhatsApp</a>
+</section>
+
+<footer>
+  <p>
+    Fotografo de 15 años en Pereira especializado en eventos, pre-15, ceremonia y fiesta.
+    Fotografia y video profesional para quinceañeras en Risaralda.
+  </p>
+</footer>
+
+</body>
+</html>

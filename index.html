@@ -455,6 +455,196 @@ document.querySelectorAll(".animate").forEach(el=>{
 
       <p class="nota">Cupos limitados · Reserva anticipada</p>
     </div>
+<style>
+/* =========================
+   URGENCIA & ESCASEZ
+========================= */
+
+.urgencia-section{
+  padding:90px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+    url("https://lh3.googleusercontent.com/pw/AP1GczOLJizGdIiISyHzxKcHSrySHLhgvT0TMoLFOvHW-Y2co6xtnGrqNpPuI0MPIevK-hNTR3DP90vKcwabRnBZtVOAHaV6dth9zn2kOJxJ4UaFkRGhmDaDWyD8pK86NOaxxsuhhXIMukqHxSru5MsWoIr68A=w1394-h929-s-no-gm?authuser=0")
+    center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+}
+
+.urgencia-box{
+  max-width:900px;
+  margin:auto;
+  background:rgba(0,0,0,.55);
+  border-radius:30px;
+  padding:60px 30px;
+  box-shadow:0 30px 70px rgba(0,0,0,.8);
+}
+
+.urgencia-box h2{
+  font-size:2.6rem;
+  margin-bottom:15px;
+}
+
+.urgencia-box p{
+  font-size:1.1rem;
+  color:#ddd;
+  margin-bottom:35px;
+}
+
+/* GATILLOS */
+.gatillos{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:45px;
+}
+
+.gatillo{
+  background:rgba(255,255,255,.12);
+  padding:14px 22px;
+  border-radius:40px;
+  font-size:.95rem;
+  backdrop-filter:blur(6px);
+}
+
+/* CONTADOR */
+.contador{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:45px;
+}
+
+.tiempo{
+  background:#111;
+  padding:18px 22px;
+  border-radius:18px;
+  min-width:90px;
+}
+
+.tiempo span{
+  display:block;
+  font-size:2rem;
+  font-weight:900;
+  color:#25D366;
+}
+
+.tiempo small{
+  font-size:.8rem;
+  color:#bbb;
+}
+
+/* CTA */
+.btn-urgencia{
+  display:inline-block;
+  background:#25D366;
+  color:#000;
+  padding:18px 42px;
+  border-radius:60px;
+  font-size:1.15rem;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 0 0 rgba(37,211,102,.7);
+  animation:pulseUrgente 2.3s infinite;
+}
+
+.btn-urgencia:hover{
+  transform:scale(1.08);
+}
+
+@keyframes pulseUrgente{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
+  70%{box-shadow:0 0 0 22px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+@media(max-width:768px){
+  .urgencia-box h2{
+    font-size:2.1rem;
+  }
+}
+</style>
+
+<body>
+
+<section class="urgencia-section">
+
+  <div class="urgencia-box">
+
+    <h2>⚠️ Fechas Premium Limitadas</h2>
+
+    <p>
+      Solo realizamos <strong>un número reducido de eventos Premium por mes</strong>
+      para garantizar calidad, dedicación total y entrega puntual.
+    </p>
+
+    <div class="gatillos">
+      <div class="gatillo">✔ Cupos limitados por mes</div>
+      <div class="gatillo">✔ Solo 1 evento Premium por día</div>
+      <div class="gatillo">✔ Fechas 2026 casi completas</div>
+      <div class="gatillo">✔ Precio especial vigente por tiempo limitado</div>
+    </div>
+
+    <p style="margin-bottom:20px;font-weight:700;">
+      ⏳ Esta oferta Premium termina en:
+    </p>
+
+    <div class="contador">
+      <div class="tiempo">
+        <span id="dias">00</span>
+        <small>Días</small>
+      </div>
+      <div class="tiempo">
+        <span id="horas">00</span>
+        <small>Horas</small>
+      </div>
+      <div class="tiempo">
+        <span id="minutos">00</span>
+        <small>Minutos</small>
+      </div>
+      <div class="tiempo">
+        <span id="segundos">00</span>
+        <small>Segundos</small>
+      </div>
+    </div>
+
+    <a href="https://wa.me/573137900448"
+       class="btn-urgencia">
+       👉 Reservar fecha por WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<script>
+// ===== CONTADOR REGRESIVO =====
+const fechaLimite = new Date();
+fechaLimite.setDate(fechaLimite.getDate() + 5);
+
+function actualizarContador(){
+  const ahora = new Date().getTime();
+  const distancia = fechaLimite - ahora;
+
+  if(distancia < 0) return;
+
+  document.getElementById("dias").innerText =
+    Math.floor(distancia / (1000 * 60 * 60 * 24));
+
+  document.getElementById("horas").innerText =
+    Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  document.getElementById("minutos").innerText =
+    Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.getElementById("segundos").innerText =
+    Math.floor((distancia % (1000 * 60)) / 1000);
+}
+
+setInterval(actualizarContador, 1000);
+</script>
+
+</body>
 
   </div>
 </section>

@@ -1232,6 +1232,122 @@ document.querySelectorAll(".animate").forEach(el=>{
     </a>
   </div>
 </section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ================================
+   SECCIÓN VER VIDEO PAQUETE PREMIUM
+================================ */
+
+.seccion-video-premium{
+  position:relative;
+  background:url('https://photos.fife.usercontent.google.com/pw/AP1GczNpJs-25blkUZKkINRx7zpa_5cz3N44ijumDYkmJrq1MhsAczOjLXtzgQ=w1337-h797-s-no-gm?authuser=0') center/cover no-repeat;
+  padding:100px 20px;
+  color:#fff;
+  text-align:center;
+}
+
+.seccion-video-premium::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+.video-premium-content{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+.video-premium-content h2{
+  font-size:2.4rem;
+  margin-bottom:20px;
+}
+
+.video-premium-content p{
+  font-size:1.1rem;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.video-premium-highlight{
+  font-size:1.3rem;
+  font-weight:800;
+  margin-bottom:40px;
+  color:#25D366;
+}
+
+.btn-video{
+  display:inline-block;
+  background:#ff0000;
+  color:#fff;
+  padding:18px 36px;
+  font-size:1.2rem;
+  font-weight:800;
+  border-radius:50px;
+  text-decoration:none;
+  transition:.3s ease;
+  box-shadow:0 0 25px rgba(255,0,0,0.5);
+}
+
+.btn-video:hover{
+  transform:scale(1.08);
+  background:#e60000;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .video-premium-content h2{
+    font-size:1.9rem;
+  }
+
+  .video-premium-content p{
+    font-size:1rem;
+  }
+
+  .btn-video{
+    width:100%;
+    padding:18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================================
+     SECCIÓN VER VIDEO PREMIUM
+================================ -->
+<section class="seccion-video-premium">
+  <div class="video-premium-content">
+
+    <h2>¿Quieres ver cómo queda el video del Paquete Premium?</h2>
+
+    <p>
+      Las fotos son importantes, pero el <strong>video es lo que realmente revive cada emoción</strong>.
+      Aquí puedes ver resultados reales de eventos de 15 años, realizados durante más de <strong>8 años de experiencia profesional</strong>.
+    </p>
+
+    <div class="video-premium-highlight">
+      ▶ Videos reales · Emociones auténticas · Calidad Premium
+    </div>
+
+    <a href="https://www.youtube.com/@franklinstid/videos"
+       class="btn-video"
+       target="_blank">
+       🎬 Ver videos reales del Paquete Premium
+    </a>
+
+  </div>
+</section>
+
+</body>
+</html>
 
 </section>
 

@@ -456,20 +456,22 @@ document.querySelectorAll(".animate").forEach(el=>{
       <p class="nota">Cupos limitados · Reserva anticipada</p>
     </div>
 <style>
+<style>
 /* =========================
    URGENCIA & ESCASEZ
 ========================= */
 
 .urgencia-section{
   padding:90px 20px;
-  background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
-    url("https://lh3.googleusercontent.com/pw/AP1GczOLJizGdIiISyHzxKcHSrySHLhgvT0TMoLFOvHW-Y2co6xtnGrqNpPuI0MPIevK-hNTR3DP90vKcwabRnBZtVOAHaV6dth9zn2kOJxJ4UaFkRGhmDaDWyD8pK86NOaxxsuhhXIMukqHxSru5MsWoIr68A=w1394-h929-s-no-gm?authuser=0")
-    center/cover no-repeat;
   color:#fff;
   text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+    url("https://lh3.googleusercontent.com/pw/AP1GczOEGptaVNxhLCxW83S0KV1KwuHmKjZQHtUUvdVXSJwbZgZ_vkyJuT72DVz_JPSQWySzP2gKaBXqetoW8B3iOFBUOXI9xiJWyhvevum0cRDhwjmwWN89uCXE8U72ecenCVUYur9k3rNKnYdZVXfT9S9GxQ=w1394-h929-s-no-gm?authuser=0")
+    center/cover no-repeat;
 }
 
+/* CAJA */
 .urgencia-box{
   max-width:900px;
   margin:auto;
@@ -494,9 +496,9 @@ document.querySelectorAll(".animate").forEach(el=>{
 .gatillos{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:18px;
   flex-wrap:wrap;
-  margin-bottom:45px;
+  margin-bottom:40px;
 }
 
 .gatillo{
@@ -507,24 +509,24 @@ document.querySelectorAll(".animate").forEach(el=>{
   backdrop-filter:blur(6px);
 }
 
-/* CONTADOR */
+/* CONTADOR DESKTOP */
 .contador{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin-bottom:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  max-width:520px;
+  margin:0 auto 45px;
 }
 
 .tiempo{
   background:#111;
-  padding:18px 22px;
+  padding:20px 10px;
   border-radius:18px;
-  min-width:90px;
 }
 
 .tiempo span{
   display:block;
-  font-size:2rem;
+  font-size:2.3rem;
   font-weight:900;
   color:#25D366;
 }
@@ -534,7 +536,7 @@ document.querySelectorAll(".animate").forEach(el=>{
   color:#bbb;
 }
 
-/* CTA */
+/* BOTÓN */
 .btn-urgencia{
   display:inline-block;
   background:#25D366;
@@ -544,12 +546,7 @@ document.querySelectorAll(".animate").forEach(el=>{
   font-size:1.15rem;
   font-weight:900;
   text-decoration:none;
-  box-shadow:0 0 0 rgba(37,211,102,.7);
   animation:pulseUrgente 2.3s infinite;
-}
-
-.btn-urgencia:hover{
-  transform:scale(1.08);
 }
 
 @keyframes pulseUrgente{
@@ -558,9 +555,39 @@ document.querySelectorAll(".animate").forEach(el=>{
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
+/* =========================
+   VERSIÓN MÓVIL
+========================= */
 @media(max-width:768px){
+
+  .urgencia-section{
+    background:
+      linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.95)),
+      url("https://lh3.googleusercontent.com/pw/AP1GczOEGptaVNxhLCxW83S0KV1KwuHmKjZQHtUUvdVXSJwbZgZ_vkyJuT72DVz_JPSQWySzP2gKaBXqetoW8B3iOFBUOXI9xiJWyhvevum0cRDhwjmwWN89uCXE8U72ecenCVUYur9k3rNKnYdZVXfT9S9GxQ=w619-h929-s-no-gm?authuser=0")
+      center/cover no-repeat;
+  }
+
+  .urgencia-box{
+    padding:45px 22px;
+  }
+
   .urgencia-box h2{
     font-size:2.1rem;
+  }
+
+  .contador{
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+
+  .tiempo span{
+    font-size:2.6rem;
+  }
+
+  .btn-urgencia{
+    width:100%;
+    padding:18px 20px;
+    font-size:1.1rem;
   }
 }
 </style>
@@ -568,87 +595,59 @@ document.querySelectorAll(".animate").forEach(el=>{
 <body>
 
 <section class="urgencia-section">
-
   <div class="urgencia-box">
 
     <h2>⚠️ Fechas Premium Limitadas</h2>
 
     <p>
-      Solo realizamos <strong>un número reducido de eventos Premium por mes</strong>
-      para garantizar calidad, dedicación total y entrega puntual.
+      Solo realizamos <strong>un número reducido de eventos Premium por mes</strong>.
+      Cuando se llenan los cupos, no abrimos más fechas.
     </p>
 
     <div class="gatillos">
-      <div class="gatillo">✔ Cupos limitados por mes</div>
+      <div class="gatillo">✔ Cupos mensuales limitados</div>
       <div class="gatillo">✔ Solo 1 evento Premium por día</div>
-      <div class="gatillo">✔ Fechas 2026 casi completas</div>
-      <div class="gatillo">✔ Precio especial vigente por tiempo limitado</div>
+      <div class="gatillo">✔ Alta demanda 2026</div>
+      <div class="gatillo">✔ Precio especial por tiempo limitado</div>
     </div>
 
-    <p style="margin-bottom:20px;font-weight:700;">
-      ⏳ Esta oferta Premium termina en:
+    <p style="font-weight:700;margin-bottom:20px;">
+      ⏳ Esta oferta termina en:
     </p>
 
     <div class="contador">
-      <div class="tiempo">
-        <span id="dias">00</span>
-        <small>Días</small>
-      </div>
-      <div class="tiempo">
-        <span id="horas">00</span>
-        <small>Horas</small>
-      </div>
-      <div class="tiempo">
-        <span id="minutos">00</span>
-        <small>Minutos</small>
-      </div>
-      <div class="tiempo">
-        <span id="segundos">00</span>
-        <small>Segundos</small>
-      </div>
+      <div class="tiempo"><span id="dias">00</span><small>Días</small></div>
+      <div class="tiempo"><span id="horas">00</span><small>Horas</small></div>
+      <div class="tiempo"><span id="minutos">00</span><small>Minutos</small></div>
+      <div class="tiempo"><span id="segundos">00</span><small>Segundos</small></div>
     </div>
 
-    <a href="https://wa.me/573137900448"
-       class="btn-urgencia">
-       👉 Reservar fecha por WhatsApp
+    <a href="https://wa.me/573137900448" class="btn-urgencia">
+      👉 Reservar fecha por WhatsApp
     </a>
 
   </div>
-
 </section>
 
 <script>
-// ===== CONTADOR REGRESIVO =====
 const fechaLimite = new Date();
 fechaLimite.setDate(fechaLimite.getDate() + 5);
 
 function actualizarContador(){
   const ahora = new Date().getTime();
   const distancia = fechaLimite - ahora;
-
   if(distancia < 0) return;
 
-  document.getElementById("dias").innerText =
-    Math.floor(distancia / (1000 * 60 * 60 * 24));
-
-  document.getElementById("horas").innerText =
-    Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-  document.getElementById("minutos").innerText =
-    Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-
-  document.getElementById("segundos").innerText =
-    Math.floor((distancia % (1000 * 60)) / 1000);
+  dias.innerText = Math.floor(distancia / (1000*60*60*24));
+  horas.innerText = Math.floor((distancia % (1000*60*60*24))/(1000*60*60));
+  minutos.innerText = Math.floor((distancia % (1000*60*60))/(1000*60));
+  segundos.innerText = Math.floor((distancia % (1000*60))/1000);
 }
-
-setInterval(actualizarContador, 1000);
+setInterval(actualizarContador,1000);
 </script>
 
 </body>
 
-  </div>
-</section>
-  <body>
    <!-- ================= TESTIMONIOS ================= -->
 <section style="max-width:1100px;margin:100px auto;padding:0 20px;">
 

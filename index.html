@@ -1260,12 +1260,26 @@ document.querySelectorAll(".animate").forEach(el=>{
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
 /* =====================================
    SECCIÓN VIDEO PAQUETE PREMIUM
 ===================================== */
 
 .seccion-video-premium{
   position:relative;
+  width:100%;
   min-height:90vh;
   display:flex;
   align-items:center;
@@ -1274,15 +1288,27 @@ document.querySelectorAll(".animate").forEach(el=>{
   padding:90px 20px;
   color:#fff;
 
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)),
-    url("https://lh3.googleusercontent.com/pw/AP1GczOeKXw7D2HkHqe0N6Roy735dYfKZ_4rAhe67L4XKwyUfjYAhYVgTfl4mIgCmLNGmwEZFx6O_wz9vbfa6r1cUBxmJKRh_aioqiqRCt_RTxVsrG5wg8XQr144LMh-krLZbRi2hsFfl1vaINZUmfNtQflikg=w1337-h797-s-no-gm?authuser=0");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  background-image:url("https://lh3.googleusercontent.com/pw/AP1GczOeKXw7D2HkHqe0N6Roy735dYfKZ_4rAhe67L4XKwyUfjYAhYVgTfl4mIgCmLNGmwEZFx6O_wz9vbfa6r1cUBxmJKRh_aioqiqRCt_RTxVsrG5wg8XQr144LMh-krLZbRi2hsFfl1vaINZUmfNtQflikg=w1337-h797-s-no-gm?authuser=0") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+}
+
+/* OVERLAY OSCURO */
+.seccion-video-premium::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.85)
+  );
+  z-index:1;
 }
 
 .video-premium-content{
+  position:relative;
+  z-index:2;
   max-width:900px;
 }
 
@@ -1313,7 +1339,7 @@ document.querySelectorAll(".animate").forEach(el=>{
   font-size:1.2rem;
   font-weight:900;
   text-decoration:none;
-  box-shadow:0 0 40px rgba(255,0,0,.6);
+  box-shadow:0 0 45px rgba(255,0,0,.7);
   transition:.35s ease;
 }
 
@@ -1347,11 +1373,7 @@ document.querySelectorAll(".animate").forEach(el=>{
 
 <body>
 
-<!-- =====================================
-     SECCIÓN VER VIDEO PAQUETE PREMIUM
-===================================== -->
 <section class="seccion-video-premium">
-
   <div class="video-premium-content">
 
     <h2>¿Quieres ver cómo queda el video del Paquete Premium?</h2>
@@ -1373,14 +1395,9 @@ document.querySelectorAll(".animate").forEach(el=>{
     </a>
 
   </div>
-
 </section>
 
 </body>
-</html>
-
-</html>
-
 </html>
 
 </html>

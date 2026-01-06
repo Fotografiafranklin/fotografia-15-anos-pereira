@@ -1246,75 +1246,88 @@ document.querySelectorAll(".animate").forEach(el=>{
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ================================
-   SECCIÓN VER VIDEO PAQUETE PREMIUM
-================================ */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =====================================
+   SECCIÓN VIDEO PAQUETE PREMIUM
+===================================== */
 
 .seccion-video-premium{
   position:relative;
-  background:url('https://lh3.googleusercontent.com/pw/AP1GczOEGptaVNxhLCxW83S0KV1KwuHmKjZQHtUUvdVXSJwbZgZ_vkyJuT72DVz_JPSQWySzP2gKaBXqetoW8B3iOFBUOXI9xiJWyhvevum0cRDhwjmwWN89uCXE8U72ecenCVUYur9k3rNKnYdZVXfT9S9GxQ=w619-h929-s-no-gm?authuser=0') center/cover no-repeat;
-  padding:100px 20px;
-  color:#fff;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-}
+  padding:80px 20px;
+  color:#fff;
 
-.seccion-video-premium::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    url("https://photos.fife.usercontent.google.com/pw/AP1GczNpJs-25blkUZKkINRx7zpa_5cz3N44ijumDYkmJrq1MhsAczOjLXtzgQ=w1337-h797-s-no-gm?authuser=0");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .video-premium-content{
-  position:relative;
   max-width:900px;
-  margin:auto;
 }
 
 .video-premium-content h2{
-  font-size:2.4rem;
-  margin-bottom:20px;
+  font-size:2.6rem;
+  margin-bottom:22px;
 }
 
 .video-premium-content p{
-  font-size:1.1rem;
-  line-height:1.6;
-  margin-bottom:30px;
+  font-size:1.15rem;
+  line-height:1.7;
+  margin-bottom:35px;
 }
 
-.video-premium-highlight{
+.video-highlight{
   font-size:1.3rem;
   font-weight:800;
-  margin-bottom:40px;
   color:#25D366;
+  margin-bottom:45px;
 }
 
 .btn-video{
   display:inline-block;
   background:#ff0000;
   color:#fff;
-  padding:18px 36px;
+  padding:20px 42px;
+  border-radius:60px;
   font-size:1.2rem;
-  font-weight:800;
-  border-radius:50px;
+  font-weight:900;
   text-decoration:none;
-  transition:.3s ease;
-  box-shadow:0 0 25px rgba(255,0,0,0.5);
+  box-shadow:0 0 35px rgba(255,0,0,.55);
+  transition:.35s ease;
 }
 
 .btn-video:hover{
-  transform:scale(1.08);
+  transform:scale(1.1);
   background:#e60000;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
+  .seccion-video-premium{
+    min-height:auto;
+    padding:90px 20px;
+  }
+
   .video-premium-content h2{
-    font-size:1.9rem;
+    font-size:2rem;
   }
 
   .video-premium-content p{
-    font-size:1rem;
+    font-size:1.05rem;
   }
 
   .btn-video{
@@ -1327,33 +1340,38 @@ document.querySelectorAll(".animate").forEach(el=>{
 
 <body>
 
-<!-- ================================
+<!-- =====================================
      SECCIÓN VER VIDEO PREMIUM
-================================ -->
+===================================== -->
 <section class="seccion-video-premium">
+
   <div class="video-premium-content">
 
     <h2>¿Quieres ver cómo queda el video del Paquete Premium?</h2>
 
     <p>
-      Las fotos son importantes, pero el <strong>video es lo que realmente revive cada emoción</strong>.
-      Aquí puedes ver resultados reales de eventos de 15 años, realizados durante más de <strong>8 años de experiencia profesional</strong>.
+      Las fotos son importantes, pero el <strong>video es lo que revive cada emoción</strong>.
+      Aquí puedes ver resultados reales de eventos de 15 años realizados durante más de
+      <strong>8 años de experiencia profesional</strong>.
     </p>
 
-    <div class="video-premium-highlight">
-      ▶ Videos reales · Emociones auténticas · Calidad Premium
+    <div class="video-highlight">
+      🎬 Videos reales · Emociones auténticas · Calidad Premium
     </div>
 
     <a href="https://www.youtube.com/@franklinstid/videos"
        class="btn-video"
        target="_blank">
-       🎬 Ver videos reales del Paquete Premium
+       ▶ Ver videos reales del Paquete Premium
     </a>
 
   </div>
+
 </section>
 
 </body>
+</html>
+
 </html>
 
 </html>

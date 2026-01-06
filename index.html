@@ -1273,6 +1273,19 @@ html, body{
   width:100%;
 }
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
 /* =====================================
    SECCIÓN VIDEO PAQUETE PREMIUM
 ===================================== */
@@ -1294,14 +1307,14 @@ html, body{
   background-repeat:no-repeat !important;
 }
 
-/* OVERLAY OSCURO */
+/* OVERLAY */
 .seccion-video-premium::before{
   content:"";
   position:absolute;
   inset:0;
   background:linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.85)
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.85)
   );
   z-index:1;
 }
@@ -1330,28 +1343,80 @@ html, body{
   margin-bottom:45px;
 }
 
+/* =====================================
+   BOTÓN ANIMADO PREMIUM
+===================================== */
+
 .btn-video{
+  position:relative;
   display:inline-block;
   background:#ff0000;
   color:#fff;
-  padding:20px 42px;
+  padding:20px 44px;
   border-radius:60px;
   font-size:1.2rem;
   font-weight:900;
   text-decoration:none;
-  box-shadow:0 0 45px rgba(255,0,0,.7);
-  transition:.35s ease;
+  overflow:hidden;
+  box-shadow:0 0 45px rgba(255,0,0,.6);
+  animation:pulseVideo 2.8s infinite;
+  transition:transform .3s ease;
 }
 
+/* Brillo animado */
+.btn-video::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-75%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  animation:shine 3.5s infinite;
+}
+
+/* Hover */
 .btn-video:hover{
   transform:scale(1.1);
   background:#e60000;
 }
 
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes pulseVideo{
+  0%{
+    box-shadow:0 0 0 0 rgba(255,0,0,.7);
+  }
+  70%{
+    box-shadow:0 0 0 25px rgba(255,0,0,0);
+  }
+  100%{
+    box-shadow:0 0 0 0 rgba(255,0,0,0);
+  }
+}
+
+@keyframes shine{
+  0%{
+    left:-75%;
+  }
+  60%{
+    left:125%;
+  }
+  100%{
+    left:125%;
+  }
+}
+
 /* RESPONSIVE */
 @media(max-width:768px){
   .seccion-video-premium{
-    min-height:auto;
     padding:100px 20px;
   }
 
@@ -1380,7 +1445,7 @@ html, body{
 
     <p>
       Las fotos cuentan una historia, pero el <strong>video revive cada emoción</strong>.
-      Aquí puedes ver resultados reales de eventos de 15 años realizados durante más de
+      Mira resultados reales de eventos de 15 años realizados durante más de
       <strong>8 años de experiencia profesional</strong>.
     </p>
 

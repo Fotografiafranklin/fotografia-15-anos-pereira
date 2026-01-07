@@ -2002,41 +2002,40 @@ document.querySelectorAll(".animate").forEach(el=>{
    CONTADOR EVERGREEN POR USUARIO
 ===================================== */
 
-const DURACION = 7 * 24 * 60 * 60 * 1000; // 7 días exactos
+const DURACION = 7 * 24 * 60 * 60 * 1000;
 const STORAGE_KEY = "contadorEvergreenFin";
 
-// Crear fecha de fin si no existe
 let fechaFin = localStorage.getItem(STORAGE_KEY);
+const ahora = Date.now();
 
-if(!fechaFin){
-  fechaFin = new Date().getTime() + DURACION;
+if (!fechaFin || isNaN(fechaFin) || fechaFin - ahora > DURACION) {
+  fechaFin = ahora + DURACION;
   localStorage.setItem(STORAGE_KEY, fechaFin);
 }
 
-fechaFin = parseInt(fechaFin);
+fechaFin = Number(fechaFin);
 
 const diasEl = document.getElementById("dias");
 const horasEl = document.getElementById("horas");
 const minutosEl = document.getElementById("minutos");
 const segundosEl = document.getElementById("segundos");
 
-function actualizarContador(){
-  const ahora = new Date().getTime();
-  let diferencia = fechaFin - ahora;
+function actualizarContador() {
+  const ahora = Date.now();
+  let diff = fechaFin - ahora;
 
-  // Si llega a cero → reinicia automáticamente
-  if(diferencia <= 0){
+  if (diff <= 0) {
     fechaFin = ahora + DURACION;
     localStorage.setItem(STORAGE_KEY, fechaFin);
-    diferencia = DURACION;
+    diff = DURACION;
   }
 
-  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-  const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-  const segundos = Math.floor((diferencia / 1000) % 60);
+  const dias = Math.floor(diff / 86400000);
+  const horas = Math.floor((diff % 86400000) / 3600000);
+  const minutos = Math.floor((diff % 3600000) / 60000);
+  const segundos = Math.floor((diff % 60000) / 1000);
 
-  diasEl.textContent = dias.toString().padStart(2,"0");
+  diasEl.textContent = dias;
   horasEl.textContent = horas.toString().padStart(2,"0");
   minutosEl.textContent = minutos.toString().padStart(2,"0");
   segundosEl.textContent = segundos.toString().padStart(2,"0");
@@ -2045,6 +2044,7 @@ function actualizarContador(){
 setInterval(actualizarContador, 1000);
 actualizarContador();
 </script>
+
 
 </body>
 </html>

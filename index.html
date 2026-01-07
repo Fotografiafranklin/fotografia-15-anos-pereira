@@ -1502,6 +1502,7 @@ html, body{
   width:100%;
 }
 
+<style>
 /* =====================================
    SECCIÓN VIDEO PAQUETE PREMIUM
 ===================================== */
@@ -1517,10 +1518,10 @@ html, body{
   padding:90px 20px;
   color:#fff;
 
-  background-image:url("https://lh3.googleusercontent.com/pw/AP1GczMo2LO9wnVGIcrHUYIhd2DoZ19teZVOjIzbWm3OWh1XBIM9vlt_2Qd7wteVECbXHM-5nD2YTIL6rNe6mEg2nBkDuS0bVKnSqXyqk336wU6wKcubVujbCbsg0LTCscTE5znuEtNTKTuj8OXpD8GrioASiw=w619-h929-s-no-gm?authuser=0") !important;
-  background-size:cover !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
+  background-image:url("https://lh3.googleusercontent.com/pw/AP1GczMo2LO9wnVGIcrHUYIhd2DoZ19teZVOjIzbWm3OWh1XBIM9vlt_2Qd7wteVECbXHM-5nD2YTIL6rNe6mEg2nBkDuS0bVKnSqXyqk336wU6wKcubVujbCbsg0LTCscTE5znuEtNTKTuj8OXpD8GrioASiw=w619-h929-s-no-gm?authuser=0");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 /* OVERLAY */
@@ -1535,12 +1536,15 @@ html, body{
   z-index:1;
 }
 
+/* CONTENIDO */
 .video-premium-content{
   position:relative;
   z-index:2;
   max-width:900px;
+  width:100%;
 }
 
+/* TEXTO */
 .video-premium-content h2{
   font-size:2.7rem;
   margin-bottom:22px;
@@ -1557,6 +1561,26 @@ html, body{
   font-weight:800;
   color:#25D366;
   margin-bottom:45px;
+}
+
+/* VIDEO RESPONSIVE */
+.video-wrapper{
+  position:relative;
+  width:100%;
+  max-width:820px;
+  margin:0 auto 50px;
+  padding-top:56.25%; /* 16:9 */
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,.9);
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
 
 /* =====================================
@@ -1579,7 +1603,6 @@ html, body{
   transition:transform .3s ease;
 }
 
-/* Brillo animado */
 .btn-video::before{
   content:"";
   position:absolute;
@@ -1596,38 +1619,22 @@ html, body{
   animation:shine 3.5s infinite;
 }
 
-/* Hover */
 .btn-video:hover{
   transform:scale(1.1);
   background:#e60000;
 }
 
-/* =====================================
-   ANIMACIONES
-===================================== */
-
+/* ANIMACIONES */
 @keyframes pulseVideo{
-  0%{
-    box-shadow:0 0 0 0 rgba(255,0,0,.7);
-  }
-  70%{
-    box-shadow:0 0 0 25px rgba(255,0,0,0);
-  }
-  100%{
-    box-shadow:0 0 0 0 rgba(255,0,0,0);
-  }
+  0%{box-shadow:0 0 0 0 rgba(255,0,0,.7);}
+  70%{box-shadow:0 0 0 25px rgba(255,0,0,0);}
+  100%{box-shadow:0 0 0 0 rgba(255,0,0,0);}
 }
 
 @keyframes shine{
-  0%{
-    left:-75%;
-  }
-  60%{
-    left:125%;
-  }
-  100%{
-    left:125%;
-  }
+  0%{left:-75%;}
+  60%{left:125%;}
+  100%{left:125%;}
 }
 
 /* RESPONSIVE */
@@ -1650,7 +1657,6 @@ html, body{
   }
 }
 </style>
-</head>
 
 <body>
 
@@ -1669,11 +1675,29 @@ html, body{
       🎬 Videos reales · Emociones auténticas · Calidad Premium
     </div>
 
+    <!-- VIDEO VIMEO -->
+    <div class="video-wrapper">
+      <iframe
+        src="https://player.vimeo.com/video/1152080004?autoplay=1&muted=1&loop=1&autopause=0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowfullscreen
+        title="15 años Valeria">
+      </iframe>
+    </div>
+
     <a href="https://www.youtube.com/@franklinstid/videos"
        class="btn-video"
        target="_blank">
        ▶ Ver videos reales del Paquete Premium
     </a>
+
+  </div>
+</section>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+</body>
+
 
   </div>
 </section>

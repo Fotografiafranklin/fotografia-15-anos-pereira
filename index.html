@@ -324,6 +324,19 @@ footer{
   target="_blank">
   💬 Hablar por WhatsApp
 </a>
+<script>
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+  const whatsappBtn = document.querySelector('.whatsapp-scroll-btn');
+  const helperText = document.querySelector('.whatsapp-helper-text');
+
+  if (scrollPosition / pageHeight > 0.9) {
+    whatsappBtn.classList.add('show');
+    helperText.classList.add('show');
+  }
+});
+</script>
 
 </body>
 

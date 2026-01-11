@@ -27,53 +27,7 @@
   50% { transform: translateY(8px); }
 }
 
-/* ===== Boton WhatsApp oculto ===== */
-.whatsapp-scroll-btn {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25D366;
-  color: #ffffff;
-  padding: 14px 22px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.4s ease;
-  z-index: 999;
-  pointer-events: none;
-}
 
-.whatsapp-scroll-btn.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* Texto sobre el boton */
-.whatsapp-helper-text {
-  position: fixed;
-  bottom: 75px;
-  right: 25px;
-  background: #ffffff;
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 13px;
-  color: #333;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  z-index: 998;
-}
-
-.whatsapp-helper-text.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 </style>
 
   
@@ -313,30 +267,10 @@ footer{
     </div>
   </section>
   <!-- =============== FIN HERO ================= -->
-<div class="whatsapp-helper-text">
-  ✅ Ya viste los paquetes<br>
-  ¿Te ayudamos a elegir el ideal?
-</div>
 
-<a 
-  href="https://wa.me/573105121313?text=Hola%2C%20ya%20vi%20los%20paquetes%20de%20fotografia%20de%2015%20años%20en%20la%20pagina%20web.%0A%0AMe%20interesa%20el%20paquete%3A%20_____%0AFecha%20del%20evento%3A%20_____%0APresupuesto%20aproximado%3A%20_____" 
-  class="whatsapp-scroll-btn" 
-  target="_blank">
-  💬 Hablar por WhatsApp
-</a>
-<script>
-window.addEventListener('scroll', function () {
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const pageHeight = document.documentElement.scrollHeight;
-  const whatsappBtn = document.querySelector('.whatsapp-scroll-btn');
-  const helperText = document.querySelector('.whatsapp-helper-text');
 
-  if (scrollPosition / pageHeight > 0.9) {
-    whatsappBtn.classList.add('show');
-    helperText.classList.add('show');
-  }
-});
-</script>
+
+
 
 </body>
 

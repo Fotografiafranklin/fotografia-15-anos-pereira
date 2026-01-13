@@ -727,9 +727,179 @@ ul li{
     </a>
 
     <p class="nota">Cupos limitados · Reserva anticipada</p>
-
+  
   </div>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Bonos Paquete Premium 15 Años</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .bonos-premium {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .bonos-premium h2 {
+      font-size: 28px;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
+
+    .bonos-premium h2 span {
+      color: #c6ff00;
+      font-size: 34px;
+    }
+
+    .bonos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .bono-card {
+      background: #111;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bono-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 35px rgba(198,255,0,0.25);
+    }
+
+    .bono-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .bono-card h3 {
+      color: #c6ff00;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .bono-card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .precio {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .precio del {
+      color: #aaa;
+    }
+
+    .precio span {
+      display: attaching;
+      color: #00ff6a;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .bonos-premium h2 {
+        font-size: 22px;
+      }
+
+      .bonos-premium h2 span {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="bonos-premium">
+    <h2>
+      SOLO SI RESERVAS EL PAQUETE PREMIUM EL DIA DE HOY PODRAS LLEVAR<br>
+      <span>TODOS ESTOS BONOS</span>
+    </h2>
+
+    <div class="bonos-grid">
+
+      <!-- BONO 1 -->
+      <div class="bono-card">
+        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b" alt="Video largo evento 15 anos">
+        <h3>BONO #1 VIDEO LARGO</h3>
+        <p>
+          Recibiras todo el material de video de todo el evento con audio original,
+          tal cual como se grabo. Un video largo de aproximadamente
+          <b>40 a 60 minutos o mas</b>.
+        </p>
+        <div class="precio">
+          Precio normal: <del>$300.000</del><br>
+          <span>HOY GRATIS</span>
+        </div>
+      </div>
+
+      <!-- BONO 2 -->
+      <div class="bono-card">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Fotos sin editar">
+        <h3>BONO #2 FOTOS SIN EDITAR</h3>
+        <p>
+          Tendras gratis todas las fotos del evento capturadas sin editar,
+          tal cual como se tomaron. Aproximadamente
+          <b>300 a 400 fotos o mas</b>.
+        </p>
+        <div class="precio">
+          Avaluado en <del>$250.000</del><br>
+          <span>HOY GRATIS</span>
+        </div>
+      </div>
+
+      <!-- BONO 3 -->
+      <div class="bono-card">
+        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" alt="Memoria USB">
+        <h3>BONO #3 MEMORIA USB</h3>
+        <p>
+          Obtendras una memoria USB para que puedas ver tus archivos en computador o TV.
+          Alli iran todas las fotos y videos del evento.
+        </p>
+        <div class="precio">
+          Precio: <del>$50.000</del><br>
+          <span>GRATIS HOY</span>
+        </div>
+      </div>
+
+      <!-- BONO 4 -->
+      <div class="bono-card">
+        <img src="https://images.unsplash.com/photo-1544717305-996b815c338c" alt="Fotos pre 15">
+        <h3>BONO #4 FOTOS PRE 15</h3>
+        <p>
+          Recibiras una sesion de fotos antes del evento en un lugar al aire libre
+          que te guste, para crear recuerdos hermosos desde los 14 anos.
+        </p>
+        <div class="precio">
+          Precio normal: <del>$500.000</del><br>
+          <span>PAGAS CERO HOY</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+
+  
 </section>
 
 </body>

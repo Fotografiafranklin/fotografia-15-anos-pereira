@@ -737,177 +737,204 @@ ul li{
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #000;
-      color: #fff;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+  }
 
-    /* SECCION BONOS */
+  /* SECCION BONOS */
+  .bonos-premium {
+    background: linear-gradient(180deg, #000 0%, #050505 100%);
+    padding: 90px 20px;
+    text-align: center;
+  }
+
+  .bonos-premium h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 60px;
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bonos-premium h2 span {
+    display: block;
+    margin-top: 12px;
+    color: #c6ff00;
+    font-size: 38px;
+  }
+
+  /* GRID */
+  .bonos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 1250px;
+    margin: auto;
+  }
+
+  /* CARD */
+  .bono-card {
+    background: #111;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .bono-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(198,255,0,0.25);
+  }
+
+  .bono-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 18px;
+  }
+
+  .bono-card h3 {
+    color: #c6ff00;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .bono-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #eaeaea;
+  }
+
+  .precio {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .precio del {
+    color: #999;
+  }
+
+  .precio span {
+    display: block;
+    margin-top: 6px;
+    color: #00ff6a;
+    font-weight: 800;
+    font-size: 19px;
+  }
+
+  /* TABLET */
+  @media (max-width: 1024px) {
+    .bonos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
     .bonos-premium {
-      background: #000;
-      padding: 80px 20px;
-      text-align: center;
+      padding: 70px 16px;
     }
 
     .bonos-premium h2 {
-      font-size: 28px;
-      margin-bottom: 50px;
-      font-weight: 700;
-      color: #fff;
+      font-size: 22px;
+      margin-bottom: 40px;
     }
 
     .bonos-premium h2 span {
-      display: block;
-      margin-top: 10px;
-      color: #c6ff00;
-      font-size: 34px;
+      font-size: 28px;
     }
 
     .bonos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .bono-card {
-      background: #111;
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .bono-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 35px rgba(198,255,0,0.25);
+      grid-template-columns: 1fr;
+      gap: 25px;
     }
 
     .bono-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      height: 180px;
     }
 
     .bono-card h3 {
-      color: #c6ff00;
-      margin-bottom: 12px;
-      font-size: 20px;
-    }
-
-    .bono-card p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #eee;
-    }
-
-    .precio {
-      margin-top: 15px;
-      font-size: 16px;
-    }
-
-    .precio del {
-      color: #aaa;
-    }
-
-    .precio span {
-      display: block;
-      margin-top: 5px;
-      color: #00ff6a;
-      font-weight: 700;
       font-size: 18px;
     }
 
-    @media (max-width: 600px) {
-      .bonos-premium h2 {
-        font-size: 22px;
-      }
-
-      .bonos-premium h2 span {
-        font-size: 28px;
-      }
+    .bono-card p {
+      font-size: 14px;
     }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
-  <!-- SECCION BONOS PAQUETE PREMIUM -->
-  <section class="bonos-premium" id="bonos-premium">
-    <h2>
-      SOLO SI RESERVAS EL PAQUETE PREMIUM EL DIA DE HOY PODRAS LLEVAR
-      <span>TODOS ESTOS BONOS</span>
-    </h2>
+<section class="bonos-premium" id="bonos-premium">
+  <h2>
+    SOLO SI RESERVAS EL PAQUETE PREMIUM EL DIA DE HOY PODRAS LLEVAR
+    <span>TODOS ESTOS BONOS</span>
+  </h2>
 
-    <div class="bonos-grid">
+  <div class="bonos-grid">
 
-      <!-- BONO 1 -->
-      <div class="bono-card">
-        <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b" alt="Video largo evento 15 anos">
-        <h3>BONO #1 VIDEO LARGO</h3>
-        <p>
-          Recibiras todo el material de video del evento con audio original,
-          tal cual como se grabo. Video largo de
-          <b>40 a 60 minutos o mas</b>.
-        </p>
-        <div class="precio">
-          Precio normal: <del>$300.000</del>
-          <span>HOY GRATIS</span>
-        </div>
+    <div class="bono-card">
+      <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b" alt="Video largo evento 15 anos">
+      <h3>BONO #1 VIDEO LARGO</h3>
+      <p>
+        Recibiras todo el material de video del evento con audio original,
+        tal cual como se grabo. Video largo de
+        <b>40 a 60 minutos o mas</b>.
+      </p>
+      <div class="precio">
+        Precio normal: <del>$300.000</del>
+        <span>HOY GRATIS</span>
       </div>
-
-      <!-- BONO 2 -->
-      <div class="bono-card">
-        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Fotos sin editar">
-        <h3>BONO #2 FOTOS SIN EDITAR</h3>
-        <p>
-          Todas las fotos del evento sin editar,
-          tal cual se tomaron. Aproximadamente
-          <b>300 a 400 fotos o mas</b>.
-        </p>
-        <div class="precio">
-          Avaluado en <del>$250.000</del>
-          <span>HOY GRATIS</span>
-        </div>
-      </div>
-
-      <!-- BONO 3 -->
-      <div class="bono-card">
-        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" alt="Memoria USB">
-        <h3>BONO #3 MEMORIA USB</h3>
-        <p>
-          Memoria USB para ver tus archivos en computador o TV.
-          Incluye todas las fotos y videos del evento.
-        </p>
-        <div class="precio">
-          Precio: <del>$50.000</del>
-          <span>GRATIS HOY</span>
-        </div>
-      </div>
-
-      <!-- BONO 4 -->
-      <div class="bono-card">
-        <img src="https://images.unsplash.com/photo-1544717305-996b815c338c" alt="Fotos pre 15">
-        <h3>BONO #4 FOTOS PRE 15</h3>
-        <p>
-          Sesion de fotos antes del evento en un lugar al aire libre,
-          para crear recuerdos hermosos desde los 14 anos.
-        </p>
-        <div class="precio">
-          Precio normal: <del>$500.000</del>
-          <span>PAGAS CERO HOY</span>
-        </div>
-      </div>
-
     </div>
-  </section>
 
-</body>
+    <div class="bono-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Fotos sin editar">
+      <h3>BONO #2 FOTOS SIN EDITAR</h3>
+      <p>
+        Todas las fotos del evento sin editar,
+        tal cual se tomaron. Aproximadamente
+        <b>300 a 400 fotos o mas</b>.
+      </p>
+      <div class="precio">
+        Avaluado en <del>$250.000</del>
+        <span>HOY GRATIS</span>
+      </div>
+    </div>
 
-  
+    <div class="bono-card">
+      <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04" alt="Memoria USB">
+      <h3>BONO #3 MEMORIA USB</h3>
+      <p>
+        Memoria USB para ver tus archivos en computador o TV.
+        Incluye todas las fotos y videos del evento.
+      </p>
+      <div class="precio">
+        Precio: <del>$50.000</del>
+        <span>GRATIS HOY</span>
+      </div>
+    </div>
+
+    <div class="bono-card">
+      <img src="https://images.unsplash.com/photo-1544717305-996b815c338c" alt="Fotos pre 15">
+      <h3>BONO #4 FOTOS PRE 15</h3>
+      <p>
+        Sesion de fotos antes del evento en un lugar al aire libre,
+        para crear recuerdos hermosos desde los 14 anos.
+      </p>
+      <div class="precio">
+        Precio normal: <del>$500.000</del>
+        <span>PAGAS CERO HOY</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 </body>
